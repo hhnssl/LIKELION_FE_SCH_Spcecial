@@ -1,0 +1,69 @@
+body,
+h1,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+
+    /* margin: 0;으로 해결돼야하는데 안돼서 수동으로....*/
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+
+body {
+    background-color: #c6c6c6;
+}
+
+.card {
+    border-radius: 15px;
+    /* background-color: #444333; */
+    overflow: hidden;
+    margin: 100px;
+}
+
+.header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 4px solid rgb(255, 214, 214);
+}
+
+.header h1 {
+    /* background-color: #fffeee; */
+    border-left: 8px solid rgb(255, 49, 169);
+    color: rgb(255, 49, 169);
+    padding-left: 20px;
+}
+
+.content {
+    background-color: #fff;
+}
+
+.bucket-list {
+    background-color: rgb(252, 238, 238);
+
+    padding: 20px 25px;
+    /* padding: auto 20px;은 왜 왼쪽에 여백이 안생길까?! */
+
+    overflow: hidden;
+    /* 부모 요소를 넘어가는 자식 요소를 넘은 만큼 가린다! */
+}
+
+.bucket-list li {
+    color: rgb(132, 132, 132);
+    background-color: #fff;
+    padding: 5px;
+    border: 4px solid rgb(255, 214, 214);
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 15px;
+}
+
+/* 동적 요소 */
+.bucket-list li:hover {
+    border: 4px solid rgb(255, 147, 147);
+    color: rgb(255, 147, 147);
+}
