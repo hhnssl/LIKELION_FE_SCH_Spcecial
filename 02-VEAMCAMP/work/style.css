@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+/* reset */
+
+body,
+h1,
+h2,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+
+  /* 창 크기 늘렸다 줄였다 할 때 양쪽 박스들이 가운데 선을 넘지 않게 하기 위해 li에 border-box  */
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+/*screen_out*/
+.ir_pm {
+  display: block;
+  overflow: hidden;
+  font-size: 1px;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/*  */
+body {
+  background-color: #222222;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  width: 100%;
+  height: 330px;
+
+  background-image: url('./images/cover.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header__title {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #fff;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.header__title--photoshop {
+  position: relative;
+  font-size: 13px;
+  z-index: 10;
+}
+
+.header__title--photoshop::after {
+  margin: 0 -7px;
+  position: absolute;
+  content: '';
+
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+
+  border-radius: 5px;
+  background-color: #1c90ff;
+  opacity: 70%;
+
+  z-index: -1;
+}
+
+/* main */
+.main {
+  position: relative;
+}
+
+.history {
+}
+
+.history__img {
+  width: 50px;
+  height: 50px;
+}
+
+.history__list {
+  padding: 50px 200px 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.history__list::after {
+  margin: 10px 0;
+  position: absolute;
+  content: '';
+
+  width: 5px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+
+  background-color: #1c90ff;
+}
+
+.history__card {
+  position: relative;
+  padding: 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+
+  flex-grow: 1;
+  width: 46%;
+
+  border-radius: 10px;
+  background-color: #111111;
+}
+
+.history__card::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  transform: translate(-50%, -50%) rotate(-45deg);
+
+  background-color: #111111;
+}
+
+.history__card:nth-child(even) {
+  margin-left: auto;
+}
+
+.history__card:nth-child(even)::after {
+  left: 0;
+  right: 100%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.history__card:nth-child(odd) {
+  margin-right: auto;
+}
+
+.history__img {
+  position: absolute;
+  top: -20px;
+  /* left: 5%;/ */
+}
+
+.history__img--right {
+  right: 5%;
+}
+
+.history__year {
+  color: #1c90ff;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.history__year--right {
+  text-align: right;
+}
+
+.history__version {
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.history__update-list {
+  padding: 50px;
+  list-style: disc;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+.history__update {
+  color: #4a4a4a;
+}
