@@ -28,12 +28,10 @@ ul {
 
 /* */
 body {
-  /* position: relative; */
   background-color: #222222;
 }
 
 .header {
-  /* position: relative; */
   top: -50px;
 
   display: flex;
@@ -100,9 +98,6 @@ body {
   padding: 50px 20% 80px;
   display: flex;
   flex-direction: column;
-
-
-  /* position: relative; */
 }
 
 /* 타임라인 */
@@ -122,6 +117,7 @@ body {
 }
 
 
+/* 크기를 키웠을 때 최대 00px을 넘어가지 않도록 처리하면 될듯!! */
 .history__card {
   position: relative;
   padding: 20px 20px 0;
@@ -165,7 +161,6 @@ body {
 
 /* 동그라미 */
 .history__card::after {
-  /* margin: 0 auto; */
   content: '';
   position: absolute;
   left: 107%;
@@ -222,13 +217,30 @@ body {
 }
 
 .history__update-list {
+  
   padding: 20px 0 20px 40px;
-  list-style: disc;
+  /* list-style: disc; */
   background-color: #000;
   border-radius: 10px;
 }
 
+/* 불렛 부분을 기본스타일인 marker가 아닌  before을 사용해서!! 
+    그리고 position absolute를 줘서! 
+    그래야 텍스트 얼라인(들여쓰기)가 자동으로 되나??
+*/
 .history__update {
+  position:relative;
   color: #4a4a4a;
   font-size: 11px;
+}
+
+.history__update::after{
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: #fff;
 }

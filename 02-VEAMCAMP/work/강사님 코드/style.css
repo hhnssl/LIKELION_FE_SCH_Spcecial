@@ -1,0 +1,109 @@
+/* CSS Resets */
+body, ol {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Layouts */
+/* wrapper는 디자인 시안을 따르기 위해 고정값을 준다.
+그래서 랩퍼 안의 요소들은 width 고정값 줄 일 없게꿈. 랩퍼에서 레이아웃 자리를 꽉 잡아준다. */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Components */
+.header {
+  background-color: orange;
+}
+
+.main {
+  background-color: #000;
+  padding: 40px 0;
+}
+
+.timeline {
+  /* time-line에 패딩을 줘버려서 wrapper에 속해있는 header와의 얼라인이 맞지 않는다.
+  그래서 네거티브 마진을 이용하여 얼라인을 정렬해준것. */
+  margin: 0 -40px;
+}
+
+.timeline-item {
+  width: 50%;
+
+  /* 패딩은 가운데 선과의 간격을 떨어뜨리기 위해 사용함 */
+  padding: 0 40px;
+
+  /* 보더 박스가 아니면 삐져나감 */
+  box-sizing: border-box;
+
+  /* 아이템들을 지그재그로 겹치게 하기 위함 */
+  margin-bottom: -130px;
+  position: relative;
+}
+
+.timeline-item::after {
+  content: ' ';
+  background-color: #111;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  margin: auto -15px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 6px solid dodgerblue;
+}
+
+.timeline-item::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  margin: 0 -5px;
+  background-color: red;
+  transform: translateY(50%);
+}
+
+.timeline-item:nth-of-type(even) {
+  margin-left: auto;
+}
+
+.timeline-item:nth-of-type(odd)::after  { right: 0; }
+.timeline-item:nth-of-type(even)::after { left: 0; }
+
+.timeline-item:nth-of-type(odd)::before  { right: 0; }
+.timeline-item:nth-of-type(even)::before { left: 0; }
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.year {
+  background-color: #222;
+  color: white;
+  min-height: 400px;
+  position: relative;
+}
+
+.year::before {
+  content: ' ';
+  background-color: #222;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto -15px;
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+}
+
+.year_left::before  { right: 0; }
+.year_right::before { left: 0; }
+
