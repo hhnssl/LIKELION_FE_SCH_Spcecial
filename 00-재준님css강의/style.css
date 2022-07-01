@@ -1,35 +1,179 @@
 @charset "utf-8";
-*{
-  margin: 0;
-  padding: 0;
+
+/* reset */
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-ul, ol, li{
+ul,
+ol,
+li {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
+  color: inherit
 }
 
-h1, h2, h3, h4{
+h1,
+h2,
+h3,
+h4 {
   font-size: inherit;
-  font-weight: inherit;
+  font-weight: inherit
+}
+
+;
+
+body {
+  margin: 0px auto;
 }
 
 /* wrapper */
-.wrapper{
+.wrapper {
   width: 960px;
   position: relative;
   margin: 20px auto;
 }
 
 /* header */
-#header section > h1{
+#header section>h1 {
   font: bold 3rem/1 "arial";
+  /* font-weight:bold;
+  font-size:3rem;
+  line-height:1;
+  font-family:"arial"; */
+  text-align: center;
+  background: yellow;
+}
+
+#header section>.sns {
+  position: absolute;
+  right: 0;
+  top: 0px;
+}
+
+#header section>.sns>li {
+  float: left;
+  margin-right: 10px;
+}
+
+#header section>.sns>li:last-child {
+  margin-right: 0px;
+}
+
+#header .nav>li {
+  float: left;
+  width: 15%;
+  background: lightseagreen;
+  margin-right: 2%;
   text-align: center;
 }
 
-header section > .sns{{
+#header .nav>li:last-child {
+  margin-right: 0%;
+}
+
+/* content - slide (캐러셀) */
+.slide {
+  width: 100%;
+  height: 500px;
+  background: #777;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.slide>.slide_btn {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slide>.slide_btn>li {
+  width: 50px;
+  height: 5px;
+  background: #fff;
+  margin-right: 20px;
+  float: left;
+  border-radius: 10px;
+}
+
+.slide>.slide_btn>li:first-child {
+  background: #000;
+  width: 100px;
+}
+
+/* content - 01 */
+.content01 .con01_wrap {
+  float: left;
+  width: 50%;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.content01 .con01_wrap h2 {
+  font: bold 2rem/1 "arial";
+}
+
+.content01 .con01_wrap h3 {
+  font: bold 2rem/1 "arial";
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.content01 .con01_img {
+  float: right;
+  width: 50%;
+  height: 350px;
+  background: royalblue;
+}
+
+/* content - 02 */
+.content02 {
+  position: relative;
+}
+
+.content02 h2 {
+  margin-bottom: 30px;
+  font: bold 13px/1 "arial";
+  color: #333;
+  text-align: center;
+}
+
+.content02 .box-style_01 {
+  width: 470px;
+  height: 225px;
+  background: #777;
+  margin-right: 20px;
+  float: left;
+}
+
+.content02 .box-style_02 {
+  float: left;
+  width: 225px;
+  height: 225px;
+  background: #aaa;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.content02 .box-style_02 > div{
+  width: 100%;
+  height: 150px;
+  background: #777;
+  margin-bottom: 20px;
+}
+
+.content02 .box-style_02 > p {
+  font:bold 1rem/1.3 "arial";
+  color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.content02 .box-style_02{
   
-}}
+}
