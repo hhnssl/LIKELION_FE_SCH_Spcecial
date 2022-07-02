@@ -1,0 +1,487 @@
+@charset "utf-8";
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: inherit;
+  font-weight: inherit
+}
+
+;
+
+body {
+  margin: 0px auto;
+}
+
+/* layout */
+.wrapper {
+  width: 960px;
+  position: relative;
+  margin: 20px auto;
+}
+
+.cfix::after {
+  display: block;
+  content: '';
+  clear: both
+}
+
+;
+
+#header section {
+  margin-bottom: 40px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* header */
+#header section>h1 {
+  font: bold 3rem/1 "arial";
+  text-align: center;
+  background: yellow;
+}
+
+#header section>.sns {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+#header section>.sns>li {
+  float: left;
+  margin-right: 10px;
+}
+
+#header section>.sns>li:last-child {
+  margin-right: 0px;
+}
+
+
+#header .nav>li {
+  float: left;
+  width: 15%;
+  background: lightseagreen;
+  margin-right: 2%;
+  text-align: center;
+}
+
+#header .nav>li:last-child {
+  margin-right: 0%;
+}
+
+/* content - slide */
+
+.slide {
+  width: 100%;
+  height: 500px;
+  background: #777;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.slide>.slide_btn {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slide>.slide_btn>li {
+  width: 50px;
+  height: 5px;
+  background: #fff;
+  margin-right: 20px;
+  float: left;
+  border-radius: 10px;
+}
+
+.slide>.slide_btn>li:first-child {
+  background: #000;
+  width: 100px;
+}
+
+/* content - 01 */
+
+.content01 .con01_wrap {
+  float: left;
+  width: 50%;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.content01 .con01_wrap h2 {
+  font: bold 2rem/1 "arial";
+}
+
+.content01 .con01_wrap h3 {
+  font: bold 2rem/1 "arial";
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.content01 .con01_img {
+  float: right;
+  width: 50%;
+  height: 350px;
+  background: royalblue;
+}
+
+/* content - 02 */
+
+.content02 {
+  position: relative;
+}
+
+.content02 h2 {
+  margin-bottom: 30px;
+  font: bold 13px/1 "arial";
+  color: #353535;
+  text-align: center;
+}
+
+.content02 .box-style_01 {
+  width: 470px;
+  height: 225px;
+  background: #777;
+  margin-right: 20px;
+  float: left;
+}
+
+.content02 .box-style_02 {
+  width: 225px;
+  height: 225px;
+  background: #f7f7f7;
+  margin-top: 20px;
+  margin-right: 20px;
+  float: left
+}
+
+.content02 .box-style_02>div {
+  width: 100%;
+  height: 152px;
+  background: #888;
+  margin-bottom: 20px;
+}
+
+.content02 .box-style_02>p {
+  font: bold 12px/1.3 "arial";
+  color: #919191;
+  margin: 20px;
+}
+
+.content02 .box-style_02:nth-of-type(2) {
+  margin-top: 0px;
+}
+
+.content02 .box-style_02:nth-of-type(3) {
+  margin-right: 0px;
+  margin-top: 0px;
+}
+
+.content02 .box-style_03 {
+  width: 225px;
+  height: 225px;
+  background: #adadad;
+  margin-top: 20px;
+  float: left;
+  padding: 45px 45px 20px 20px;
+  box-sizing: border-box;
+}
+
+.content02 .box-style_03 h3 {
+  font: bold 20px/1 "arial";
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.content02 .box-style_03 p {
+  font: bold 12px/1.6 "arial";
+  color: white;
+}
+
+.content02 .btn_more {
+  width: 35px;
+  height: 35px;
+  background: #555;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+#footer {
+  background: #777;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+
+
+/* 태블릿 피씨 */
+@media screen and (max-width:960px) {
+  .wrapper {
+    /* 가로 스크롤 없애기!1*/
+    width: 100%;
+    margin: 0 auto 20px;
+  }
+
+  /* header */
+  #header section>h1 {
+    /* 태블릿버전에서는 로고를 크게 */
+    font: bold 5rem/1 "arial";
+    background: lightblue;
+  }
+
+  #header .nav>li {
+    background: lightblue;
+  }
+
+  /* content - slide */
+  .slide {
+    height: 350px;
+    background: lightblue;
+  }
+
+  .slide>.slide_btn>li {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+  }
+
+  .slide>.slide_btn>li:first-child {
+    width: 15px;
+  }
+
+  /* content - 01 */
+  .content01 .con01_wrap {
+    /* float 제거 */
+    float: none;
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .content01 .con01_wrap h2 {
+    font: bold 2.5rem/1 "arial";
+  }
+
+  .content01 .con01_wrap h3 {
+    font: bold 2.5rem/1 "arial";
+  }
+
+  .content01 .con01_img {
+    float: none;
+    width: 100%;
+    height: 350px;
+    background: royalblue;
+  }
+
+  /* content - 02 */
+  .content02 h2 {
+    margin-bottom: 30px;
+    font: bold 13px/1 "arial";
+  }
+
+  .content02 .box-style_01 {
+    width: 100%;
+    height: 260px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    float: none;
+  }
+
+  .content02 .box-style_02 {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+    margin-right: 0px;
+    float: none;
+  }
+
+  .content02 .box-style_02>div {
+    height: 50%;
+    margin-bottom: 20px;
+  }
+
+  .content02 .box-style_02>p {
+    font: bold 12px/1.3 "arial";
+    margin: 20px;
+  }
+
+  .content02 .box-style_02:nth-of-type(2) {
+    margin-top: 0px;
+  }
+
+  .content02 .box-style_02:nth-of-type(3) {
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+
+  .content02 .box-style_03 {
+    width: 100%;
+    height: 225px;
+    margin-top: 20px;
+    float: none;
+    padding: 45px;
+  }
+
+  .content02 .box-style_03 h3 {
+    font: bold 2.5rem/1 "arial";
+    margin-bottom: 40px;
+  }
+
+  .content02 .box-style_03 p {
+    font: bold 1rem/1 "arial";
+  }
+
+
+  #footer {
+    background: lightblue;
+    padding: 30px;
+    color: #555;
+  }
+
+}
+
+/* 모바일 */
+@media screen and (max-width:460px) {
+  .wrapper {
+    /* 가로 스크롤 없애기!1*/
+    width: 100%;
+    margin: 0 auto 20px;
+  }
+
+  /* header */
+  #header section>h1 {
+    /* 태블릿버전에서는 로고를 크게 */
+    font: bold 5rem/1 "arial";
+    background: lightblue;
+  }
+
+  #header .nav>li {
+    background: lightblue;
+  }
+
+  /* content - slide */
+  .slide {
+    height: 350px;
+    background: lightblue;
+  }
+
+  .slide>.slide_btn>li {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+  }
+
+  .slide>.slide_btn>li:first-child {
+    width: 15px;
+  }
+
+  /* content - 01 */
+  .content01 .con01_wrap {
+    /* float 제거 */
+    float: none;
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .content01 .con01_wrap h2 {
+    font: bold 2.5rem/1 "arial";
+  }
+
+  .content01 .con01_wrap h3 {
+    font: bold 2.5rem/1 "arial";
+  }
+
+  .content01 .con01_img {
+    float: none;
+    width: 100%;
+    height: 350px;
+    background: royalblue;
+  }
+
+  /* content - 02 */
+  .content02 h2 {
+    margin-bottom: 30px;
+    font: bold 13px/1 "arial";
+  }
+
+  .content02 .box-style_01 {
+    width: 100%;
+    height: 260px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    float: none;
+  }
+
+  .content02 .box-style_02 {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+    margin-right: 0px;
+    float: none;
+  }
+
+  .content02 .box-style_02>div {
+    height: 50%;
+    margin-bottom: 20px;
+  }
+
+  .content02 .box-style_02>p {
+    font: bold 12px/1.3 "arial";
+    margin: 20px;
+  }
+
+  .content02 .box-style_02:nth-of-type(2) {
+    margin-top: 0px;
+  }
+
+  .content02 .box-style_02:nth-of-type(3) {
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+
+  .content02 .box-style_03 {
+    width: 100%;
+    height: 225px;
+    margin-top: 20px;
+    float: none;
+    padding: 45px;
+  }
+
+  .content02 .box-style_03 h3 {
+    font: bold 2.5rem/1 "arial";
+    margin-bottom: 40px;
+  }
+
+  .content02 .box-style_03 p {
+    font: bold 1rem/1 "arial";
+  }
+
+
+  #footer {
+    background: lightblue;
+    padding: 30px;
+    color: #555;
+  }
+}
